@@ -258,7 +258,7 @@ const YoutubeIframe = (props, ref) => {
   }, [useLocalHTML, contentScale, baseUrlOverride, allowWebViewZoom]);
 
   return (
-    <View style={{height, width}}>
+    <View style={{overflow: 'hidden', height, width}}>
       <WebView
         bounces={false}
         originWhitelist={['*']}
@@ -290,7 +290,7 @@ const YoutubeIframe = (props, ref) => {
 };
 
 const styles = StyleSheet.create({
-  webView: {backgroundColor: 'transparent'},
+  webView: {opacity: 0.99, backgroundColor: 'transparent'},
 });
 
 export default forwardRef(YoutubeIframe);
